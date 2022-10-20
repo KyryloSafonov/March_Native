@@ -1,9 +1,10 @@
 import React from 'react';
 import {Button, Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {HomeNavigationProp, HomeRouters} from '../routers/HomeRouters';
 
 export const Home = () => {
-  const navigation = useNavigation<any>();
+  const navigation = useNavigation<HomeNavigationProp>();
   return (
     <View
       style={{
@@ -15,9 +16,7 @@ export const Home = () => {
       <Text>Home Screen</Text>
       <Button
         title="Go to Posts screen"
-        onPress={() =>
-          navigation.navigate('Posts', {postId: '1'})
-        }
+        onPress={() => navigation.navigate(HomeRouters.Posts, {postId: '1'})}
       />
     </View>
   );
