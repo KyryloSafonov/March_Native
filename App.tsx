@@ -46,6 +46,7 @@ const App = () => {
       <View style={styles.parentForHeader}>
         <View style={styles.headerSection}>
           <View style={styles.headerItem}>
+            <Text>New field for test git</Text>
             {!users.length ? (
               <Button
                 title={'Get users'}
